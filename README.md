@@ -2,7 +2,7 @@
 
 A small pure-[Ink](https://www.inklestudios.com/ink/) implementation of lists of integers in the *normal* sense, rather than Ink's native "lists."
 
-The lis is stored as a string, using Ink's extremely limited string functionality, so the runtimes are insane and depend on the size of the largest integer currently stored in the list.  There are plenty of situations where this should be fine for prototyping or as an external function fallback, but in production code, please just use external functions.
+The list is stored as a string, using Ink's extremely limited string functionality, so the runtimes are Bad (for a list) and depend on the size of the largest integer currently stored in the list.  There are plenty of situations where this should be fine for prototyping or as an external function fallback, but in production code, please just use external functions.
 
 I have not yet implemented *setting/removing* at arbitrary indices, so it's currently just a **stack** rather than a list.  But full list-ness is coming eventually.  Maybe.
 
