@@ -30,9 +30,12 @@ Out-of-bounds error code when popping from empty stack:
 
 # Other Notes
 ALL inserted values must be integers between 0 and `L_MAX_INT (256 by default)`.
-Peek/get is `O(MAX*n)`
-Push is `O(n)`
-Pop is `O(MAX*n^2)`
+
+Runtimes:
+- Peek/get is `O(MAX*n)`
+- Push is `O(n)`
+- Pop is `O(MAX*n^2)`
+
 Note that for all of these, `MAX` refers to the largest int *actually present in the list currently*, not the defined `L_MAX_INT` constant.  So it'll run faster when all the values stored in the list are small.
 
 # Features still to implement:
