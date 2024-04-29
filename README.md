@@ -4,7 +4,7 @@ A small pure-[Ink](https://www.inklestudios.com/ink/) implementation of lists of
 
 The list is stored as a string, using Ink's extremely limited string functionality, so the runtimes are Bad (for a list) and depend on the size of the largest integer currently stored in the list.  There are plenty of situations where this should be fine for prototyping or as an external function fallback, but in production code, please just use external functions.
 
-I have not yet implemented *setting/removing* at arbitrary indices, so it's currently just a **stack** rather than a list.  But full list-ness is coming eventually.  Maybe.
+I have not yet implemented *setting/removing/inserting* at arbitrary indices, so it's currently just a **stack** rather than a list.  But full list-ness is coming eventually.  Maybe.
 
 # Usage
 See `test_example.ink`
@@ -42,5 +42,6 @@ Note that for all of these, `MAX` refers to the largest int *actually present in
 # Features still to implement:
  - set at arbitrary index
  - remove from arbitrary index
+ - insert at arbitrary index
  - check for validity of values (i.e. only integers) when inserting
  - support Ink list items as arguments instead of integers
