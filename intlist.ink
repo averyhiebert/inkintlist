@@ -4,32 +4,6 @@ CONST L_MAX_INT = 256 // Note: the bigger this is, the slower operations are!
 CONST L_OUT_OF_BOUNDS = -1
 CONST L_INVALID_VALUE = -2
 
-//-> test_example
-=== test_example ===
-
-~temp x = "" // empty string = empty list
-Pushing 2, 44, 6 (note: DO NOT push invalid values)
-~L_push(x,2)
-~L_push(x,44)
-~L_push(x,6)
-
-Peek: {L_peek(x)}
-Accessing index 0 (bottom of stack): {L_get(x,0)}
-Popping all 3 values:
-{L_pop(x)}
-{L_pop(x)}
-{L_pop(x)}
-Out-of-bounds error code when popping from empty stack:
-{L_pop(x)}
-
-General notes:
-Stacks are stored as strings. Empty string = empty stack.
-ALL inserted values must be integers between 0 and L_MAX_INT (= {L_MAX_INT}). (I have not implemented validity checks in Push)
-Peek/get is O(MAX_INT*n)
-Push is O(MAX_INT*n)
-Pop is O(MAX_INT*n^2), I think?
-Note that for all of these, MAX_INT refers to the largest int actually present in the list currently.  So it'll be faster if you only store small values.
--> DONE
 
 // get integer at index i
 === function L_get(ls,i) ===
